@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="aurora"></div>
+    <div class="aurora two"></div>
+    <div id="effects"></div>
+
+    <main class="game">
+        <header class="topbar">
+            <div class="logo">
+                <span>TIC</span> TAC <b>TOE</b>
+            </div>
+            <button class="theme" id="theme">☾</button>
+        </header>
+
+        <p class="subtitle">✦ Small Moves · Big Fun ✦</p>
+
+        <section class="scores">
+            <div class="score active xbox" id="boxX">
+                <div class="player">PLAYER ONE</div>
+                <div class="symbol xcolor">X</div>
+                <strong id="scoreX">0</strong>
+            </div>
+
+            <div class="score obox" id="boxO">
+                <div class="player" id="playerOLabel">PLAYER TWO</div>
+                <div class="symbol ocolor">O</div>
+                <strong id="scoreO">0</strong>
+            </div>
+        </section>
+
+        <p class="status" id="status" aria-live="polite">
+            Player X's turn
+        </p>
+
+        <div class="board-wrap">
+            <div class="board" id="board">
+                <button class="cell" data-i="0"></button>
+                <button class="cell" data-i="1"></button>
+                <button class="cell" data-i="2"></button>
+                <button class="cell" data-i="3"></button>
+                <button class="cell" data-i="4"></button>
+                <button class="cell" data-i="5"></button>
+                <button class="cell" data-i="6"></button>
+                <button class="cell" data-i="7"></button>
+                <button class="cell" data-i="8"></button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control primary" id="restart">
+                ↻ RESTART GAME
+            </button>
+            <button class="control" id="undo">↶ Undo Move</button>
+            <button class="control" id="reset">⟳ Reset Scores</button>
+        </div>
+
+        <div class="mode-row">
+            <label for="mode">🎮 GAME MODE</label>
+            <select id="mode">
+                <option value="two">2 Players</option>
+                <option value="ai">Play vs Computer</option>
+            </select>
+        </div>
+
+        <p class="footer">✦ MADE WITH ♥ · KEEP PLAYING ✦</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
